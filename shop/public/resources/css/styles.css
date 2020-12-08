@@ -1,0 +1,461 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Yantramanav', sans-serif !important;
+    font-size: 18px;
+}
+
+@font-face {
+    font-family: lcd;
+    src: url(../fonts/lcdfont.ttf);
+}
+
+/* --------- Menu --------- */
+
+.menu-burguer {
+    background-color: rgb(255, 255, 255);
+    width: 20rem;
+    height: 120vh;
+    position: fixed;
+    border-right: 1px solid #e7e7e7;
+    z-index: 1;
+    display: none;
+    padding: 0;
+}
+
+.menuOn {
+    display: block;
+    animation: moveIn 0.3s ease-in-out;
+    position: fixed;
+}
+
+.menu-burguer div {
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.menu-burguer li {
+    list-style: none;
+    text-align: center;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-burguer li a {
+    width: 90%;
+    background-color: #e7e7e7;
+    padding: 1rem;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.menu-burguer li a:hover {
+    background-color: #44b348;
+    color: white;
+}
+
+.menu-burguer div img {
+    width: 1rem;
+}
+
+@keyframes moveIn {
+    from {left: -100px; opacity: 0;}
+    to {left: 0; opacity: 1;}
+}
+
+/* --------- Menu --------- */
+
+/* --------- Carrinho --------- */
+.menu-cart {
+    background-color: rgb(255, 255, 255);
+    width: 30rem;
+    height: 120vh;
+    border-left: 1px solid #e7e7e7;
+    z-index: 1;
+    display: none;
+    position: fixed;
+    right: 0;
+    padding: 0;
+}
+
+.menu-cart div {
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.menu-cart li {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu-cart div img {
+    width: 1rem;
+}
+
+.menuOnCart {
+    display: block;
+    animation: moveInCart 0.3s ease-in-out;
+}
+
+.menuOnCart li img {
+    width: 5rem;
+    margin: 2rem 1rem 2rem 3rem;
+}
+
+.menuOnCart li img:last-child {
+    width: 1.5rem;
+    margin-left: 1.2rem;
+}   
+
+
+#subtotal {
+    display: flex;
+    position: relative;
+    border-top: 1px solid #e7e7e7;
+}
+
+.checkout {
+    display: flex;
+    justify-content: center;
+    padding-left: 2rem;
+    margin-top: 2rem;
+}
+
+.checkout button {
+    margin-right: 2rem;
+    width: 10rem;
+    height: 3rem;
+}
+
+@keyframes moveInCart {
+    from {right: -100px; opacity: 0;}
+    to {right: 0; opacity: 1;}
+}
+
+/* --------- Carrinho --------- */
+
+header ul {
+    padding: 0 1rem;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+.desfoque {
+    filter: blur(4px);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 5rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+.logo {
+    width: 10rem;
+}
+
+nav img {
+    width: 2rem;
+}
+
+#container {
+    transition: 0.5s;
+    height: 100vh;
+}
+
+.produto {
+    width: 20rem;
+    margin: 2rem 2rem 0 0;
+    padding-bottom: 1rem;
+    color: #4caf50;
+}
+
+.preco {
+    color: #a1a1a1;
+    font-weight: 600;
+}
+
+.produto:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.produto img {
+    width: 100%;
+}
+
+.produto p {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.shop-section {
+    width: 75%;
+    margin: auto;
+    padding: 1rem 0 2rem 0;
+}
+
+#shop {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+}
+
+.logo img {
+    width: 1rem;
+}
+
+#filter {
+    margin-left: 1rem;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-top: 1px solid #e7e7e7;
+    padding: 2rem;
+    width: 100%;
+}
+
+footer img {
+    width: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+form {
+    margin: auto;
+    width: 25rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form h1 {
+    text-align: center;
+}
+
+form input {
+    height: 3rem;
+    font-size: 15px;
+    padding: 0rem 1rem;
+    outline: none;
+    border: 1px solid #e7e7e7;
+    border-radius: 0.3rem;
+    text-align: center;
+    width: 25rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    font-size: 18px;
+    font-family: lcd !important;
+}
+
+form div {
+    display: flex;
+    height: 2rem;
+}
+
+form div input {
+    position: relative;
+    bottom: 1rem;
+    right: 6rem;
+    width: 1rem;
+}
+
+form div label {
+    position: relative;
+    right: 11.5rem;
+    bottom: 0.35rem;
+}
+
+#btnSubmit {
+    font-family: 'Yantramanav', sans-serif !important;
+    cursor: pointer;
+    background-color: #4ecf52;
+    color: white;
+    font-weight: 700;
+}
+
+#btnSubmit2 {
+    font-family: 'Yantramanav', sans-serif !important;
+    cursor: pointer;
+    background-color: #4ecf52;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 5rem;
+}
+
+form div {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+form div a {
+    text-decoration: none;
+    color: #4ecf52;
+    font-weight: 700;
+}
+
+#erro {
+    background-color: #ff6666;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+    color: white;
+    text-align: center;
+    list-style: none;
+    padding: 0.5rem;
+    font-weight: 300;
+}
+
+#sucesso {
+    background-color: rgb(70, 192, 70);
+    margin-bottom: 1rem;
+    color: white;
+    text-align: center;
+    list-style: none;
+    padding: 0.5rem;
+    font-weight: 700;
+}
+
+
+.perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.perfil hr {
+    margin-top: 5rem;
+    width: 100%;
+    border: 1px solid #e7e7e7;
+}
+
+.perfil img {
+    width: 8rem;
+    border-radius: 100%;
+    position: relative;
+    bottom: 5rem;
+}
+
+.perfil h1 {
+    position: relative;
+    bottom: 5rem;
+    margin-bottom: -5.5rem;
+    font-weight: 700;
+}
+
+.perfil a {
+    margin-bottom: 2rem;
+    color: rgb(255, 75, 75);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.perfil-area {
+    width: 80%;
+    display: flex;
+    font-weight: 600;
+}
+
+.area1 {
+    flex: 1;
+}
+
+.area1 form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 8rem;
+}
+
+.area1 form label {
+    font-size: 25px;
+}
+
+.area1 form input {
+    width: 25rem;
+    font-size: 20px;
+    color: rgb(59, 59, 59);
+    font-family: 'Yantramanav', sans-serif !important;
+}
+
+.area2 {
+    flex: 1;
+    border: 1px solid #e7e7e7;
+    margin-bottom: 5rem;
+    padding: 1rem;
+}
+
+.remove-btn {
+    cursor: pointer;
+}
+
+.btn-edit {
+    background-color: rgb(255, 255, 71);
+    border: 1px solid rgb(187, 187, 0);
+    cursor: pointer;
+}
+
+.btn-edit2 {
+    background-color: rgb(21, 189, 85);
+    border: 1px solid rgb(3, 109, 17);
+    cursor: pointer;
+    color: white !important;
+}
+
+@media only screen and (max-width: 1050px) {
+    #shop {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    #shop {
+        grid-template-columns: auto auto;
+    }
+
+    header nav {
+        margin-bottom: 0rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #shop {
+        grid-template-columns: auto;
+    }
+
+    header nav {
+        margin-bottom: 0rem;
+    }
+
+    nav {
+        padding: 1rem 2rem;
+    }
+
+    .menu-cart {
+        width: 100vw;
+    }
+
+    .menu-burguer {
+        width: 100vw;
+    }
+}
