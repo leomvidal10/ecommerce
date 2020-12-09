@@ -221,7 +221,16 @@ nav img {
     width: 1rem;
 }
 
-#filter {
+#filter-div {
+    display: flex;
+    justify-content: center;
+}
+
+#filter-div input {
+    margin-right: 1rem;
+}
+
+#filter-div a {
     margin-left: 1rem;
 }
 
@@ -420,6 +429,13 @@ form div a {
     border: 1px solid rgb(3, 109, 17);
     cursor: pointer;
     color: white !important;
+}
+
+.nadaaqui {
+    font-weight: 700;
+    color: rgb(255, 112, 112);
+    font-size: 1.5rem;
+    margin-top: 2rem;
 }
 
 @media only screen and (max-width: 1050px) {

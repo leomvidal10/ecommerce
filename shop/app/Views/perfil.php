@@ -15,11 +15,11 @@
 <body>
     <div id="container">
         <header>
-            <nav>
-                <a href="#" class="w3-bar-item menu"><img src="<?= base_url()?>../resources/img/menu.svg" alt=""></a>
-                <a href="<?= base_url()?>" class="w3-bar-item"><img class='logo' src="<?= base_url()?>../resources/img/teste.gif" alt=""></a>
-                <a href="#" class="w3-bar-item cart"><img src="<?= base_url()?>../resources/img/cart.svg" alt=""></a>
-            </nav>
+        <nav id="app2">
+            <a v-on:click="abrir()" href="#" class="w3-bar-item menu"><img src="<?= base_url()?>../resources/img/menu.svg" alt=""></a>
+            <a href="<?= base_url()?>" class="w3-bar-item"><img class='logo' src="<?= base_url()?>../resources/img/teste.gif" alt=""></a>
+            <a v-on:click="abrirCart()" href="#" class="w3-bar-item cart"><img src="<?= base_url()?>../resources/img/cart.svg" alt=""></a>
+        </nav>
         </header>
         <section class="perfil">
             <hr>
@@ -52,9 +52,6 @@
 
                         <input class='btn-edit' type="submit" value="Editar Dados">
                     </form>
-                </div>
-                <div class='area2'>
-                    <p>Pedidos:</p>
                 </div>
             </div>
         </section>

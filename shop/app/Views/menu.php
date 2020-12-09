@@ -13,10 +13,11 @@
 </head>
 
 <body>
-    <ul class="menu-burguer">
+<div id="app">
+    <ul v-if="menu" class="menu-burguer menuOn">
         <div>
             <h1>MENU</h1>
-            <a href="#" class="fecharMenu"><img src="<?= base_url()?>../resources/img/x.svg" alt=""></a>
+            <a v-on:click="fechar()" href="#" class="fecharMenu"><img src="<?= base_url()?>../resources/img/x.svg" alt=""></a>
         </div>
         <li>
             <a href="<?= base_url()?>">HOME</a>
@@ -25,23 +26,27 @@
             <a href="<?= base_url()?>/account">ACCOUNT</a>
         </li>
     </ul>
-    <ul class="menu-cart">
+    <ul v-show="cart" class="menu-cart menuOnCart">
         <div>
             <h1>CART</h1>
-            <a href="#" class="fecharMenuCart"><img src="<?= base_url()?>../resources/img/x.svg" alt=""></a>
+            <a v-on:click="fecharCart()" href="#" class="fecharMenuCart"><img src="<?= base_url()?>../resources/img/x.svg" alt=""></a>
         </div>
         <span id="produtosCart">
             
         </span>
         <div id="subtotal">
             <h2>SUBTOTAL</h2>
-            <p id="app">R$ {{checkout}}</p>
+            <p id="app">R$ 0.00</p>
         </div>
         <span class="checkout">
             <p>O Carrinho está vazio!</p>
         </span>
     </ul>
+</div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="<?= base_url()?>../resources/js/carrinho.js"></script>
+<script src="<?= base_url()?>../resources/js/menu.js"></script>
+<script src="<?= base_url()?>../resources/js/scripts.js"></script>
 </html>

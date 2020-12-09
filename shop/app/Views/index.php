@@ -14,11 +14,11 @@
 <body>
     <div id="container">
         <header>
-            <nav>
-                <a href="#" class="w3-bar-item menu"><img src="<?= base_url()?>../resources/img/menu.svg" alt=""></a>
-                <a href="<?= base_url()?>" class="w3-bar-item"><img class='logo' src="<?= base_url()?>../resources/img/teste.gif" alt=""></a>
-                <a href="#" class="w3-bar-item cart"><img src="<?= base_url()?>../resources/img/cart.svg" alt=""></a>
-            </nav>
+        <nav id="app2">
+            <a v-on:click="abrir()" href="#" class="w3-bar-item menu"><img src="<?= base_url()?>../resources/img/menu.svg" alt=""></a>
+            <a href="<?= base_url()?>" class="w3-bar-item"><img class='logo' src="<?= base_url()?>../resources/img/teste.gif" alt=""></a>
+            <a v-on:click="abrirCart()" href="#" class="w3-bar-item cart"><img src="<?= base_url()?>../resources/img/cart.svg" alt=""></a>
+        </nav>
         </header>
         <section class="w3-content w3-display-container" style="max-width:800px">
             <img class="mySlides" src="<?= base_url()?>../resources/img/img_mountains_wide.jpg" style="width:100%">
@@ -34,24 +34,20 @@
             </div>
         </section>
         <section class="shop-section">
-                <select>
-                    <option>Mostrar por</option>   
-                    <option>Menor preco</option>  
-                    <option>Maior preco</option>   
-                </select>
+            <div id="filter-div">
+                <input type="text" id="filter">
+                <button id='filter-btn'>Buscar</button>
+            </div>
             <div id="shop">
             </div>
         </section>
-
         <footer>
             <a href="https://www.instagram.com/cactusstyl/" target="_blank"><img src="<?= base_url()?>../resources/img/insta.png" alt="instagram"></a>
             <p>Copyright CactusStyl - 2020</p>
         </footer>
     </div>
+    <script src="<?= base_url()?>../resources/js/menu.js"></script>
+    <script src="<?= base_url()?>../resources/js/slides.js"></script>
+    <script src="<?= base_url()?>../resources/js/carrinho.js"></script>
 </body>
-<script src="<?= base_url()?>../resources/js/slides.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
-<script src="<?= base_url()?>../resources/js/carrinho.js"></script>
-<script src="<?= base_url()?>../resources/js/menu.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </html>

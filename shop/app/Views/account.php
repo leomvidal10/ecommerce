@@ -14,11 +14,11 @@
 <body>
     <div id="container">
         <header>
-            <nav>
-                <a href="#" class="w3-bar-item menu"><img src="<?= base_url()?>../resources/img/menu.svg" alt=""></a>
-                <a href="<?= base_url()?>" class="w3-bar-item"><img class='logo' src="<?= base_url()?>../resources/img/teste.gif" alt=""></a>
-                <a href="#" class="w3-bar-item cart"><img src="<?= base_url()?>../resources/img/cart.svg" alt=""></a>
-            </nav>
+        <nav id="app2">
+            <a v-on:click="abrir()" href="#" class="w3-bar-item menu"><img src="<?= base_url()?>../resources/img/menu.svg" alt=""></a>
+            <a href="<?= base_url()?>" class="w3-bar-item"><img class='logo' src="<?= base_url()?>../resources/img/teste.gif" alt=""></a>
+            <a v-on:click="abrirCart()" href="#" class="w3-bar-item cart"><img src="<?= base_url()?>../resources/img/cart.svg" alt=""></a>
+        </nav>
             <?php 
 				if(!empty($sucesso)) {
 				 	echo ($sucesso);
@@ -47,8 +47,6 @@
         </footer>
     </div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
-<script src="<?= base_url()?>../resources/js/carrinho.js"></script>
 <script src="<?= base_url()?>../resources/js/menu.js"></script>
-
+<script src="<?= base_url()?>../resources/js/carrinho.js"></script>
 </html>
